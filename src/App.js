@@ -3,6 +3,7 @@ import {BrowserRouter as Router, NavLink, Route, Switch} from 'react-router-dom'
 
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
+import Page404 from "./components/Page404/Page404";
 
 class App extends Component {
   render() {
@@ -34,6 +35,7 @@ class App extends Component {
             <Switch>
               <Route path="/users" component={Users}/>
               <Route path="/courses" component={Courses}/>
+              <Route component={Page404}/>
             </Switch></div>
         </Router>
     );
