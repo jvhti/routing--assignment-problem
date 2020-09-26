@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom'
 
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
+import Course from "./containers/Course/Course";
 
 class App extends Component {
   render () {
@@ -33,7 +34,8 @@ class App extends Component {
             </header>
             <Switch>
               <Route path="/users" component={Users}/>
-              <Route path="/courses" component={Courses}/>
+              <Route path="/courses" exact component={Courses}/>
+              <Route path="/courses/:id" component={Course}/>
             </Switch></div>
         </Router>
     );

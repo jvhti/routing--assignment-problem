@@ -32,3 +32,8 @@ body {
   text-decoration: underline;
   font-weight: bold;
 }
+
+.Courses a {
+  text-decoration: none;
+  color: black;
+}
