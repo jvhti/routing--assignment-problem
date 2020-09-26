@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom';
 
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
@@ -22,10 +22,19 @@ class App extends Component {
     // );
     return (
         <Router>
-          <Switch>
-            <Route path="/users" component={Users}/>
-            <Route path="/courses" component={Courses}/>
-          </Switch>
+          <div>
+            <header>
+              <nav className="navbar">
+                <ul>
+                  <li><NavLink to="/users">Users</NavLink></li>
+                  <li><NavLink to="/courses">Courses</NavLink></li>
+                </ul>
+              </nav>
+            </header>
+            <Switch>
+              <Route path="/users" component={Users}/>
+              <Route path="/courses" component={Courses}/>
+            </Switch></div>
         </Router>
     );
   }
