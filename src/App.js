@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom';
+import React, {Component} from 'react';
+import {BrowserRouter as Router, NavLink, Route, Switch} from 'react-router-dom';
 
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
-import Course from "./containers/Course/Course";
 
 class App extends Component {
-  render () {
+  render() {
     // return (
     //   <div className="App">
     //     <ol style={{textAlign: 'left'}}>
@@ -34,8 +33,7 @@ class App extends Component {
             </header>
             <Switch>
               <Route path="/users" component={Users}/>
-              <Route path="/courses" exact component={Courses}/>
-              <Route path="/courses/:id" component={Course}/>
+              <Route path="/courses" component={Courses}/>
             </Switch></div>
         </Router>
     );
